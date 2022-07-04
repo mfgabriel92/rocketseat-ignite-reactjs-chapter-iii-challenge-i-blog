@@ -1,0 +1,51 @@
+{
+  "id": "b19ac632-b8de-451e-9661-a5ab2771d0c9",
+  "uid": "hic-modi-error",
+  "type": "posts",
+  "data": {
+    "title": "e-enable global platforms",
+    "subtitle": "visualize collaborative web services",
+    "author": "incentivize revolutionary web services",
+    "banner": {
+      "dimensions": {
+        "width": 900,
+        "height": 500
+      },
+      "alt": "Placeholder image",
+      "copyright": null,
+      "url": "https://images.unsplash.com/photo-1576662712957-9c79ae1280f8?w=900&h=500&fit=crop"
+    },
+    "content": [
+      {
+        "heading": "transform open-source portals",
+        "body": [
+          {
+            "type": "paragraph",
+            "text": "Id sint veniam incididunt culpa fugiat do sunt et reprehenderit et eiusmod ipsum.",
+            "spans": []
+          }
+        ]
+      },
+      {
+        "heading": "repurpose one-to-one partnerships",
+        "body": [
+          {
+            "type": "paragraph",
+            "text": "Ea duis adipisicing proident officia. Enim esse anim aliquip proident cillum ipsum qui ipsum id.",
+            "spans": []
+          }
+        ]
+      },
+      {
+        "heading": "scale plug-and-play initiatives",
+        "body": [
+          {
+            "type": "paragraph",
+            "text": "Enim fugiat nostrud et officia tempor.",
+            "spans": []
+          }
+        ]
+      }
+    ]
+  }
+}

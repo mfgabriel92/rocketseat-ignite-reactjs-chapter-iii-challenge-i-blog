@@ -1,1 +1,53 @@
-// TODO
+.home {
+  width: 100%;
+  max-width: 700px;
+  margin: 0 auto;
+
+  .posts {
+    margin-top: 4.05rem;
+
+    .post {
+      display: block;
+
+      strong {
+        color: var(--heading);
+        font-size: 1.75rem;
+      }
+
+      p {
+        color: var(--body);
+        font-size: 1.125rem;
+        margin-top: 1rem;
+      }
+
+      small {
+        color: var(--info);
+        font-size: 0.875em;
+        margin-top: 1.5rem;
+        display: flex;
+        gap: 1.6rem;
+
+        time,
+        span {
+          display: flex;
+          align-items: center;
+          gap: 0.5rem;
+        }
+      }
+
+      &+.post {
+        margin-top: 3rem;
+      }
+    }
+  }
+
+  .loadMore {
+    color: var(--hightlight);
+    margin-top: 4rem;
+    font-size: 1.125rem;
+    display: block;
+    cursor: pointer;
+    background: transparent;
+    border: none;
+  }
+}
