@@ -4,6 +4,7 @@ import Head from 'next/head';
 import Link from 'next/link';
 import { useState } from 'react';
 import { FaCalendarAlt, FaUserAlt } from 'react-icons/fa';
+import ptBR from 'date-fns/locale/pt-BR';
 import styles from './home.module.scss';
 
 import Header from '../components/Header';
@@ -60,10 +61,9 @@ export default function Home({ postsPagination }: HomeProps) {
                 <small>
                   <time>
                     <FaCalendarAlt />
-                    {format(
-                      new Date(post.first_publication_date),
-                      'dd LLL yyyy'
-                    )}
+                    {format(new Date('2021-03-15 00:00:00'), 'dd LLL yyyy', {
+                      locale: ptBR,
+                    })}
                     {/* {format(new Date('2021-03-25 00:00:00'), 'dd LLL yyyy')} */}
                   </time>
                   <span>

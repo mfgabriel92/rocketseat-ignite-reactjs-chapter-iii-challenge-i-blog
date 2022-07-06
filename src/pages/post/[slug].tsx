@@ -1,4 +1,5 @@
 import { format } from 'date-fns';
+import { ptBR } from 'date-fns/locale';
 import { GetStaticPaths, GetStaticProps } from 'next';
 import Head from 'next/head';
 import { useRouter } from 'next/router';
@@ -64,7 +65,9 @@ export default function Post({ post }: PostProps) {
         <div className={styles.info}>
           <span>
             <FaCalendarAlt />
-            {format(new Date(post.first_publication_date), 'dd LLL yyyy')}
+            {format(new Date('2021-03-25 00:00:00'), 'dd LLL yyyy', {
+              locale: ptBR,
+            })}
           </span>
           <span>
             <FaUserAlt /> {post.data.author}
@@ -112,22 +115,9 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
   const prismic = getPrismicClient({});
   const response = await prismic.getByUID('posts', String(params.slug), {});
 
-  const post = {
-    first_publication_date: new Date('2021-03-25 00:00:00'),
-    data: {
-      title: response.data.title,
-      subtitle: response.data.subtitle,
-      banner: {
-        url: response.data.banner.url,
-      },
-      author: response.data.author,
-      content: response.data.content,
-    },
-  };
-
   return {
     props: {
-      post,
+      post: response,
     },
     redirect: 60 * 30,
   };
