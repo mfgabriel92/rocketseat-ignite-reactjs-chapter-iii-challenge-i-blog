@@ -61,10 +61,13 @@ export default function Home({ postsPagination }: HomeProps) {
                 <small>
                   <time>
                     <FaCalendarAlt />
-                    {format(new Date('2021-03-15 00:00:00'), 'dd LLL yyyy', {
-                      locale: ptBR,
-                    })}
-                    {/* {format(new Date('2021-03-25 00:00:00'), 'dd LLL yyyy')} */}
+                    {format(
+                      new Date(post.first_publication_date),
+                      'dd MMM yyyy',
+                      {
+                        locale: ptBR,
+                      }
+                    )}
                   </time>
                   <span>
                     <FaUserAlt /> {post.data.author}
